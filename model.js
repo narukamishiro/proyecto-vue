@@ -1,6 +1,16 @@
 var app = new Vue({
-  el: '#app',
+  el: '#pr',
   data: {
-    message: 'Hello vue!'
+    message: '',
+	personas: [
+    ]
+  },
+  methods: {
+    addList: function () {
+      this.personas.push({ text:this.message });
+    },
+	comp:function(){
+		this.isActive=!this.Active;
+	}
   }
-})
+});

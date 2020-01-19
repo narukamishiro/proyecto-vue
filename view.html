@@ -5,9 +5,17 @@
 		
 	</head>
 	<body>
-		<div id="app">
-			{{ message }}
+		<div id="pr">
+			<input v-model="message">
+			<button v-on:click="addList">add</button>
+			<ul>
+				<li v-for="(persona,text) in personas" >
+					<input type="checkbox" v.model="persona">
+					<p v-bind:class="(active:persona.isActive)">{{ persona.text }} </p>
+				</li>
+			</ul>
 		</div>
+		
 		<script src="model.js"></script>
 	</body>
 </html>
